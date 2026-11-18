@@ -1,46 +1,124 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-    content="Discover stories, explore new ideas, and find your next favourite book at Readers’ Haven.">
+  <meta name="description" content="Explore books, memberships, and learning services at Readers' Haven Public Library.">
   <title>Home | Readers’ Haven</title>
   <link rel="stylesheet" href="../styles/style.css">
 </head>
-
 <body class="page-home">
   <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="index.html">Readers’ Haven<span>Public Library</span></a>
+      <a class="brand" href="index.html">
+        Readers’ Haven<span>Public Library</span>
+      </a>
       <nav aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="collections.html">Collection</a></li>
+          <li><a href="collections.html">Collections</a></li>
           <li><a href="membership.html">Membership</a></li>
           <li><a href="services.html">Digital Services</a></li>
-          <li><a href="contact.html">Contact</a></li>git add src/index.html
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
   <main id="main-content" class="container">
-    <p class="eyebrow">Readers’ Haven · Home</p>
-    <h1>A place for every reader.</h1>
-    <p class="intro">Discover stories, explore new ideas, and find your next favourite book at Readers’ Haven.</p>
-    <section class="content-panel" aria-labelledby="page-section-title">
-      <h2 id="page-section-title">Welcome to Readers’ Haven</h2>
-      <p>Our public library brings readers together through books, learning, and a shared curiosity about the world.</p>
-      <a class="button" href="collections.html">Explore collections</a>
+    <section class="home-hero" aria-labelledby="home-title">
+      <div>
+        <p class="eyebrow">Read · Discover · Belong</p>
+        <h1 id="home-title">Your next chapter starts here.</h1>
+        <p class="intro">
+          Welcome to Readers’ Haven, a public library where stories,
+          knowledge, and community come together. Find your next favourite
+          book, a quiet place to study, or a new idea to explore.
+        </p>
+        <div class="home-actions">
+          <a class="button" href="collections.html">Browse collections</a>
+          <a class="button home-secondary" href="membership.html">View membership</a>
+        </div>
+      </div>
+
+      <aside class="home-hours" aria-labelledby="hours-title">
+        <p class="home-label">Plan your visit</p>
+        <h2 id="hours-title">Opening hours</h2>
+        <dl>
+          <div>
+            <dt>Monday–Saturday</dt>
+            <dd><time datetime="09:00">9:00 AM</time> – <time datetime="20:00">8:00 PM</time></dd>
+          </div>
+          <div>
+            <dt>Sunday</dt>
+            <dd><time datetime="10:00">10:00 AM</time> – <time datetime="16:00">4:00 PM</time></dd>
+          </div>
+        </dl>
+        <p>Everyone is welcome to read, learn, and discover.</p>
+      </aside>
+    </section>
+
+    <section class="home-mission" aria-labelledby="mission-title">
+      <div>
+        <p class="eyebrow">Why we are here</p>
+        <h2 id="mission-title">Knowledge for everyone.</h2>
+      </div>
+      <p>
+        Our mission is to make reading and lifelong learning accessible to
+        everyone. We connect students, families, and curious minds with
+        books, digital resources, and welcoming spaces that support
+        education, creativity, and personal growth.
+      </p>
+    </section>
+
+    <section class="home-discover" aria-labelledby="discover-title">
+      <p class="eyebrow">Explore Readers’ Haven</p>
+      <h2 id="discover-title">Find something for you.</h2>
+      <div class="home-cards">
+        <article class="home-card">
+          <span class="home-card-label">Discover</span>
+          <h3>Books for every reader</h3>
+          <p>Explore fiction, non-fiction, children’s books, and reference resources.</p>
+          <a href="collections.html">Explore collections →</a>
+        </article>
+        <article class="home-card">
+          <span class="home-card-label">Belong</span>
+          <h3>A membership that fits</h3>
+          <p>Discover Student, Adult, and Family plans for your reading journey.</p>
+          <a href="membership.html">Compare memberships →</a>
+        </article>
+        <article class="home-card">
+          <span class="home-card-label">Connect</span>
+          <h3>Learning beyond books</h3>
+          <p>Find digital resources and services to support your next study session.</p>
+          <a href="services.html">View digital services →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="home-visit" aria-labelledby="visit-title">
+      <div>
+        <p class="eyebrow">Your local reading space</p>
+        <h2 id="visit-title">Come visit us.</h2>
+        <p>Take a break, turn a page, and make yourself at home.</p>
+      </div>
+      <div>
+        <address>
+          Readers’ Haven Public Library<br>
+          18 Knowledge Avenue, Johar Town<br>
+          Lahore, Pakistan
+        </address>
+        <a href="contact.html">Contact us and share feedback →</a>
+      </div>
     </section>
   </main>
+
   <footer class="site-footer">
     <div class="container">
-      <p>Readers’ Haven Public Library · A fictional library for a university project.</p>
+      <p>Readers’ Haven Public Library · A fictional university project. Address and timings are sample content.</p>
     </div>
   </footer>
 </body>
-
 </html>
