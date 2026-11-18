@@ -49,4 +49,77 @@ h2 { margin: 0 0 16px; font-size: 30px; }
 /* Collections page: add selectors scoped under .page-collections here. */
 /* Membership page: add selectors scoped under .page-membership here. */
 /* Services page: add selectors scoped under .page-services here. */
+
+/* =====================================
+   DIGITAL SERVICES PAGE - ush11
+===================================== */
+
+.page-services .services-intro {
+  margin-bottom: 35px;
+}
+
+.page-services .content-panel {
+  max-width: 100%;
+  padding: 36px;
+}
+
+.page-services .service-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.page-services .service-item:last-child {
+  border-bottom: none;
+}
+
+.page-services .service-item h3 {
+  margin: 0 0 14px;
+  color: var(--green);
+  font-size: 22px;
+}
+
+.page-services .service-item p {
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+.page-services .service-item a {
+  font-weight: bold;
+  color: var(--green);
+}
+
+.page-services .services-help {
+  margin-top: 45px;
+  padding: 35px;
+  background: #e8eee7;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.page-services .services-help p {
+  margin-bottom: 25px;
+  color: var(--muted);
+}
+
+/* Services-specific responsive design */
+@media (max-width: 600px) {
+
+  .page-services .content-panel {
+    padding: 20px;
+  }
+
+  .page-services .service-item {
+    padding: 18px 0;
+  }
+
+  .page-services .service-item h3 {
+    font-size: 18px;
+  }
+
+  .page-services .services-help {
+    padding: 24px 18px;
+  }
+
+}
+
 /* Contact page: add selectors scoped under .page-contact here. */
