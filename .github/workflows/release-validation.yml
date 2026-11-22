@@ -1,0 +1,46 @@
+name: Release validation
+
+on:
+  push:
+    branches: [release/v2.0]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  docker-release:
+    name: Build image and test all five pages
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out the release source
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+
+      - name: Build the required multi-stage Dockerfile
+        run: |
+          set -euo pipefail
+          docker version
+          docker image build --progress=plain -t readers-haven-release:v2.0 .
+          docker image ls readers-haven-release:v2.0
+          docker image history readers-haven-release:v2.0
+
+      - name: Run and verify the release image
+        run: |
+          set -euo pipefail
+          docker container run -d --name haven-release-validation -p 127.0.0.1:8081:80 readers-haven-release:v2.0
+          docker container ls
+          node scripts/check-site.mjs http://127.0.0.1:8081
+          docker container exec haven-release-validation ls -la /usr/share/nginx/html
+          docker container exec haven-release-validation sh -c 'test ! -d /app/node_modules && ! command -v node'
+
+      - name: Show logs and clean up the test container
+        if: always()
+        run: |
+          docker container logs haven-release-validation || true
+          docker container stop haven-release-validation || true
+          docker container rm haven-release-validation || true
