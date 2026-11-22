@@ -36,6 +36,10 @@ fi
 git fetch origin
 git switch main
 git pull --ff-only origin main
+if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+  printf 'Local main differs from origin/main. Publish only the reviewed remote main commit.\n'
+  exit 1
+fi
 
 # Check the protected release was incorporated before publishing production.
 if ! git merge-base --is-ancestor origin/release/v2.0 HEAD; then
