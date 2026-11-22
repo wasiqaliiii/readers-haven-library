@@ -48,5 +48,369 @@ h2 { margin: 0 0 16px; font-size: 30px; }
 /* Home page: add selectors scoped under .page-home here. */
 /* Collections page: add selectors scoped under .page-collections here. */
 /* Membership page: add selectors scoped under .page-membership here. */
+
 /* Services page: add selectors scoped under .page-services here. */
+
+/* =====================================
+   DIGITAL SERVICES PAGE - ush11
+===================================== */
+
+.page-services .services-intro {
+  margin-bottom: 35px;
+}
+
+.page-services .content-panel {
+  max-width: 100%;
+  padding: 36px;
+}
+
+.page-services .service-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.page-services .service-item:last-child {
+  border-bottom: none;
+}
+
+.page-services .service-item h3 {
+  margin: 0 0 14px;
+  color: var(--green);
+  font-size: 22px;
+}
+
+.page-services .service-item p {
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+.page-services .service-item a {
+  font-weight: bold;
+  color: var(--green);
+}
+
+.page-services .services-help {
+  margin-top: 45px;
+  padding: 35px;
+  background: #e8eee7;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.page-services .services-help p {
+  margin-bottom: 25px;
+  color: var(--muted);
+}
+
+/* Services-specific responsive design */
+@media (max-width: 600px) {
+
+  .page-services .content-panel {
+    padding: 20px;
+  }
+
+  .page-services .service-item {
+    padding: 18px 0;
+  }
+
+  .page-services .service-item h3 {
+    font-size: 18px;
+  }
+
+  .page-services .services-help {
+    padding: 24px 18px;
+  }
+
+}
+
 /* Contact page: add selectors scoped under .page-contact here. */
+
+/* ==================================
+   CONTACT PAGE - ush11
+================================== */
+
+.page-contact .contact-intro {
+  margin-bottom: 35px;
+}
+
+.page-contact .content-panel {
+  max-width: 100%;
+  padding: 36px;
+}
+
+.page-contact .contact-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.page-contact .contact-item {
+  padding: 20px;
+  background: #f7f5ed;
+  border-radius: 8px;
+}
+
+.page-contact .contact-item h3 {
+  margin-top: 0;
+  color: var(--green);
+}
+
+.page-contact .contact-form-section {
+  margin-top: 40px;
+  padding: 36px;
+  border-radius: 8px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.page-contact .contact-form {
+  margin-top: 25px;
+}
+
+.page-contact .form-group {
+  margin-bottom: 22px;
+}
+
+.page-contact .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.page-contact .form-group input,
+.page-contact .form-group textarea {
+  width: 100%;
+  padding: 13px;
+  font: inherit;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+
+.page-contact .form-group input:focus,
+.page-contact .form-group textarea:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.page-contact .contact-form button {
+  border: none;
+  cursor: pointer;
+}
+
+.page-contact .form-note {
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.page-contact .contact-help {
+  margin-top: 40px;
+  padding: 35px;
+  text-align: center;
+  background: #e8eee7;
+  border-radius: 8px;
+}
+
+.page-contact .contact-help p {
+  margin-bottom: 22px;
+}
+
+/* Contact-specific responsive design */
+@media (max-width: 600px) {
+  .page-contact .content-panel,
+  .page-contact .contact-form-section {
+    padding: 20px;
+  }
+
+  .page-contact .contact-details {
+    grid-template-columns: 1fr;
+  }
+
+  .page-contact .contact-help {
+    padding: 25px 18px;
+  }
+}
+
+/* Home page — append below the existing shared stylesheet. */
+.page-home main { padding-block: 0 64px; }
+
+.page-home .home-hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 48px;
+  padding-block: 64px;
+}
+.page-home .home-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.page-home .home-actions .button { border: 1px solid var(--green); }
+.page-home .home-secondary { background: transparent; color: var(--green); }
+.page-home .home-secondary:hover { background: #e8ece4; }
+
+.page-home .home-hours {
+  padding: 32px;
+  border-radius: 12px;
+  background: var(--green);
+  color: var(--white);
+}
+.page-home .home-hours h2 { color: var(--white); }
+.page-home .home-label {
+  color: #e5d3a8;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.page-home .home-hours dl { margin: 0; }
+.page-home .home-hours dl > div {
+  padding-block: 14px;
+  border-bottom: 1px solid #668273;
+}
+.page-home .home-hours dt { font-size: 14px; color: #e0e8e2; }
+.page-home .home-hours dd { margin: 4px 0 0; font-size: 20px; font-weight: 700; }
+.page-home .home-hours > p:last-child { margin-bottom: 0; font-size: 14px; }
+
+.page-home .home-mission {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 40px;
+  align-items: center;
+  padding-block: 40px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.page-home .home-mission p:last-child { margin: 0; color: var(--muted); }
+.page-home .home-discover { padding-block: 48px; }
+.page-home .home-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+.page-home .home-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.page-home .home-card-label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.page-home .home-card h3 {
+  margin: 14px 0 8px;
+  font: 400 24px/1.2 Georgia, serif;
+}
+.page-home .home-card p { color: var(--muted); }
+.page-home .home-card a { margin-top: auto; font-weight: 700; font-size: 14px; }
+
+.page-home .home-visit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+  border-radius: 8px;
+  background: #eeeadf;
+}
+.page-home .home-visit p:last-child { margin-bottom: 0; color: var(--muted); }
+.page-home .home-visit address { margin-bottom: 16px; font-style: normal; }
+
+/* Home-specific responsive layout required for this contributor. */
+@media (max-width: 760px) {
+  .page-home .home-hero,
+  .page-home .home-mission,
+  .page-home .home-cards,
+  .page-home .home-visit {
+    grid-template-columns: 1fr;
+  }
+  .page-home .home-hero { gap: 28px; padding-block: 40px; }
+  .page-home .home-mission { gap: 16px; padding-block: 28px; }
+  .page-home .home-discover { padding-block: 32px; }
+  .page-home .home-hours,
+  .page-home .home-card,
+  .page-home .home-visit { padding: 24px; }
+}
+
+
+
+
+
+
+/* ===== Collections page ===== */
+.page-collections .collections-intro {
+  max-width: 760px;
+  margin: 2rem auto 1.5rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.page-collections .collections-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.page-collections .collection-card {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-top: 4px solid #8b5e34;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.page-collections .collection-card h2 {
+  margin-top: 0;
+}
+
+.page-collections .collection-desc {
+  color: #555555;
+  font-style: italic;
+}
+
+.page-collections .title-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-collections .title-list li {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.page-collections .title-list li:last-child {
+  border-bottom: none;
+}
+
+.page-collections .book-title {
+  font-weight: bold;
+}
+
+.page-collections .book-author {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+/* Collections page: responsive layout */
+@media (max-width: 700px) {
+  .page-collections .collections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-collections .collection-card {
+    padding: 1rem;
+  }
+}
