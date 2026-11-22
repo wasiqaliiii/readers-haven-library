@@ -493,3 +493,14 @@ h2 { margin: 0 0 16px; font-size: 30px; }
   font-size: 0.9rem;
   color: #666666;
 }
+
+/* Collections page: responsive layout */
+@media (max-width: 700px) {
+  .page-collections .collections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-collections .collection-card {
+    padding: 1rem;
+  }
+}
