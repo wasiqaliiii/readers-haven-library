@@ -337,6 +337,10 @@ h2 { margin: 0 0 16px; font-size: 30px; }
   .page-home .home-card,
   .page-home .home-visit { padding: 24px; }
 }
+
+
+
+
 /* ===== Membership page ===== */
 .page-membership .membership-intro {
   max-width: 760px;
@@ -426,5 +430,77 @@ h2 { margin: 0 0 16px; font-size: 30px; }
 
   .page-membership .plan-fee {
     font-size: 1.5rem;
+  }
+}
+
+/* ===== Collections page ===== */
+.page-collections .collections-intro {
+  max-width: 760px;
+  margin: 2rem auto 1.5rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.page-collections .collections-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.page-collections .collection-card {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-top: 4px solid #8b5e34;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.page-collections .collection-card h2 {
+  margin-top: 0;
+}
+
+.page-collections .collection-desc {
+  color: #555555;
+  font-style: italic;
+}
+
+.page-collections .title-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-collections .title-list li {
+  display: flex;
+  flex-direction: column;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.page-collections .title-list li:last-child {
+  border-bottom: none;
+}
+
+.page-collections .book-title {
+  font-weight: bold;
+}
+
+.page-collections .book-author {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+/* Collections page: responsive layout */
+@media (max-width: 700px) {
+  .page-collections .collections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-collections .collection-card {
+    padding: 1rem;
   }
 }
