@@ -403,8 +403,6 @@ h2 { margin: 0 0 16px; font-size: 30px; }
   font-size: 0.9rem;
   color: #666666;
 }
-<<<<<<< HEAD
-=======
 
 /* Collections page: responsive layout */
 @media (max-width: 700px) {
@@ -416,4 +414,3 @@ h2 { margin: 0 0 16px; font-size: 30px; }
     padding: 1rem;
   }
 }
->>>>>>> 7230730 (style: add responsive media query for collections page)
