@@ -1,8 +1,8 @@
 {
   "name": "readers-haven-library",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "Readers\u2019 Haven static library website for UCP DevOps Assignment 02",
+  "description": "Readers’ Haven static library website for UCP DevOps Assignment 02",
   "scripts": {
     "start": "parcel \"src/*.html\" --port 1234",
     "build": "parcel build \"src/*.html\" --dist-dir dist --public-url ./"
