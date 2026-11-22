@@ -6,7 +6,9 @@ Repository: https://github.com/wasiqaliiii/readers-haven-library
 
 ## Current project stage
 
-This is the project baseline: five linked starter pages, shared styling, the Parcel build, ignore files, and team instructions. The page issues describe work still to be implemented by their contributors. The Dockerfile is proposed separately on `feature/dockerfile` through a PR into `develop`; merge it only after two genuine teammate approvals. Each student must run the required commands on their own machine and capture their own evidence. This repository does not claim those individual tasks are complete.
+All five pages are implemented and merged into develop. Release v2.0 reconciles the existing main history, preserves all five page styles, and adds repeatable Docker release validation. The release PR still requires genuine teammate approvals before it can be merged into main.
+
+See [the release checklist](docs/RELEASE_CHECKLIST.md) for Tasks 14–16. After the reviewed release is merged, the TL runs `bash scripts/publish-final-image.sh` on their own Mac to build, test, publish and re-pull the final image. The target is `waasiqq/readers-haven-final:v2.0`; publication is confirmed only after the push and verification actually succeed.
 
 ## Team and page ownership
 
@@ -16,9 +18,9 @@ The user has chosen a three-person team. Keep all five required pages and distri
 | --- | --- | --- | --- |
 | Wasiq Ali, Team Lead | `wasiqaliiii` | Home; shared Dockerfile; integration, release, final image and submission | `feature/home-page`, `feature/dockerfile` |
 | Hasan Saeed | `hasanSaeed17` | Collections and Membership | `feature/collections-page`, `feature/membership-page` |
-| Team Member | `ush11` | Digital Services and Contact | `feature/services-page`, `feature/contact-page` |
+| Ushna | `ush11` | Digital Services and Contact | `feature/services-page`, `feature/contact-page` |
 
-Both collaborator invitations were pending when this baseline was prepared. Each student must accept their invitation before pushing or providing an eligible approval. Page issues identify intended owners; GitHub assignment may remain pending until invitations are accepted.
+Collaborators have accepted their invitations and the page issues are assigned. All five feature pages are merged into develop. Every reviewer must use their own GitHub account for genuine approvals.
 
 The assignment specifies five students and three approvals for `main`. A three-person group has only two reviewers other than a PR author. This repository uses two required approvals on both `develop` and `main` as a practical adaptation. Confirm the smaller group and this exception with the instructor before submission. The exception has not been represented as instructor-approved.
 
@@ -56,7 +58,7 @@ git remote set-url origin https://github.com/wasiqaliiii/readers-haven-library.g
 | `styles/style.css` | The only shared stylesheet |
 | `package.json`, `package-lock.json` | Parcel scripts and locked dependencies |
 | `.gitignore`, `.dockerignore` | Exclude generated files and credentials |
-| `Dockerfile` | The only Dockerfile; initially available on `feature/dockerfile` |
+| `Dockerfile` | The only Dockerfile; merged through `feature/dockerfile` |
 | `docs/ASSIGNMENT_GUIDE.md` | Individual Docker commands, evidence checklist and release steps |
 
 ## Branch workflow
@@ -65,9 +67,9 @@ git remote set-url origin https://github.com/wasiqaliiii/readers-haven-library.g
 - `develop`: integration branch; feature PRs require two approvals.
 - `feature/<page>-page`: one branch per page, created from `develop`.
 - `feature/dockerfile`: TL’s shared Dockerfile PR into `develop`.
-- `release/v2.0`: create from `develop` only after all pages are implemented and integrated; do not create a final release from this starter project.
+- `release/v2.0`: complete five-page release created from `develop`; reviewed into `main`, then synchronized back into `develop`.
 
-The feature branches have been prepared centrally. Each contributor checks out their assigned branch and makes their own descriptive commits:
+The feature branches were prepared centrally and retain each contributor’s commits. Each contributor checks out their assigned branch and makes their own descriptive commits:
 
 ```bash
 git fetch origin
